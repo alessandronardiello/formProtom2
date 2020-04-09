@@ -1,0 +1,25 @@
+div {
+   color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    font-size-adjust: initial;
+    
+}
+
+.ui-panel-titlebar{
+    background-color :  blue !important;
+    color: #FFCD00 !important;
+}
+
+.ui-panel-content{
+
+    background-color : royalblue !important;
+}
+
+header{
+    background-color: royalblue;
+}
+
+#errors{
+    color: red;
+}

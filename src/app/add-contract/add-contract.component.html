@@ -1,0 +1,31 @@
+<p-card header="Add Customers" [style]="{width: '360px'}">
+    <div [hidden]="submitted">
+        <form #addCustomerForm="ngForm">
+            
+            <div class="form-group">
+                <label for="DES_CON">Descrizione Contratto <br></label> 
+                <input type="text" class="form-group" id="DES_CON" placeholder="DESCRIZIONE CONTRATTO"
+                required
+                [(ngModel)]="contratto.DES_CON" name="descrizione contratto" #DES_CON="ngModel">
+                <div [hidden]="DES_CON.valid || DES_CON.pristine"
+                class="alert alert-danger">
+                Descrizione Contratto OBBLIGATORIA
+                </div>
+            </div>
+
+        <br>
+        <div class="btn-group btn-group-sm">
+            <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+            <button type="button" class="btn btn-dark" (click)="addCustomer()" [disabled]="!addCustomerForm.form.valid">Add Customer </button>
+        </div>
+        </form>
+    </div></p-card>
+    
+    <div [hidden]="!submitted">
+        <p>AGGIUNTO CON SUCCESSO! -> <span class="badge badge-light">{{contratto.DES_CON}}</span></p>
+    <div class="btn-group btn-group-sm">
+        <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+        <button type="button" class="btn btn-dark" (click)="newCustomer(); addCustomerForm.reset()">Continue </button>
+    </div>
+    
+    </div>

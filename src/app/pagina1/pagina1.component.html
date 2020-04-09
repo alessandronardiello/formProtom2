@@ -1,0 +1,201 @@
+<p-panel header="CONTRATTO CANDIDATO" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+     <form #addCustomerForm="ngForm">
+  
+        <div class="p-col"> Contratto attuale :
+
+            <p-listbox [options]="types" name=contratto [(ngModel)]="contratto.DES_CON" ></p-listbox>
+
+        </div> <br>
+
+        <button type="button" (click)="addContract();">MANDA PRIMI DATI </button> <br> 
+
+
+   <!--   <div class="p-grid">
+
+            <div class="p-col">Cognome <br><input placeholder="inserisci il cognome" name=cognome pInputText type="text"
+                [(ngModel)]="dati.cognome" id="cognome">
+                <div class="p-col" id="errors" *ngIf="cognome.errors && cognome.dirty">
+                    COGNOME OBBLIGATORIO
+                </div>
+            </div>
+
+            <div class="p-col">Nome <br><input placeholder="inserisci il nome" name=nome pInputText type="text"
+                [(ngModel)]="dati.nome" id="nome">
+                <div class="p-col" id="errors" *ngIf="nome.errors && nome.dirty">
+                    NOME OBBLIGATORIO
+                </div>
+            </div>
+
+        </div> <br>
+        <div class="p-grid">
+            <div class="p-col">Data di nascita <br><input placeholder="inserisci la data" name=dataDiNascita pInputText type="date"
+                [(ngModel)]="dati.dataDiNascita" id="dataDiNascita">
+                <div class="p-col" id="errors" *ngIf="dataDiNascita.errors && dataDiNascita.dirty">
+                    DATA OBBLIGATORIA
+                </div>
+            </div>
+            <div class="p-col">Luogo di nascita <br><input placeholder="inserisci il luogo di nascita" name=luogoDiNascita pInputText
+                    type="text" [(ngModel)]="dati.luogoDiNascita" id="luogoDiNascita">
+                <div class="p-col" id="errors" *ngIf="luogoDiNascita.errors && luogoDiNascita.dirty">
+                    LUOGO DI NASCITA OBBLIGATORIO
+                </div>
+            </div>
+           
+
+        </div> <button type="button" (click)="addCustomer()">MANDA PRIMI DATI </button> <br> -->
+
+
+
+       <!--  <div class="p-grid">
+            <div class="p-col">Residenza(Via/P.zza) <br><input placeholder="inserisci la residenza" pInputText
+                    type="text" formControlName="residenza" id="residenza">
+                <div class="p-col" id="errors" *ngIf="residenza.errors && residenza.dirty">
+                    RESIDENZA OBBLIGATORIO
+                </div>
+            </div>
+            <div class="p-col">Numero Civico/Int <br><input placeholder="inserisci il numero civico" pInputText
+                    type="number" formControlName="numCivicoResidenza" id="numCivicoResidenza">
+                <div class="p-col" id="errors" *ngIf="numCivicoResidenza.errors && numCivicoResidenza.dirty">
+                    CIVICO OBBLIGATORIO
+                </div>
+            </div>
+        </div><br>
+        <div class="p-grid">
+            <div class="p-col">Comune<input placeholder="inserisci il comune" pInputText type="text"
+                    formControlName="comuneResidenza" id="comuneResidenza">
+                <div class="p-col" id="errors" *ngIf="comuneResidenza.errors && comuneResidenza.dirty">
+                    COMUNE OBBLIGATORIO
+                </div>
+            </div>
+            <div class="p-col">Provincia <input placeholder="inseriscila provincia" pInputText type="text"
+                    formControlName="provinciaResidenza" id="provinciaResidenza">
+                <div class="p-col" id="errors" *ngIf="provinciaResidenza.errors && provinciaResidenza.dirty">
+                    PROVINCIA OBBLIGATORIA
+                </div>
+            </div>
+            <div class="p-col"> <input placeholder="inserisci il CAP" pInputText type="number"
+                    formControlName="capResidenza" id="capResidenza">
+                <div class="p-col" id="errors" *ngIf="capResidenza.errors && capResidenza.dirty">
+                    CAP OBBLIGATORIO
+                </div>
+            </div> <br>
+        </div> <br>
+
+        <div class="p-col">Il domicilio è uguale alla residenza? <p-radioButton name="domicilioUgualeResidenza"
+                value="Si" label="Si" inputId="si" (onClick)="showDomicilio(false)"></p-radioButton>
+            <p-radioButton name="domicilioUgualeResidenza" value="No" label="No" inputId="no"
+                (onClick)="showDomicilio(true)"></p-radioButton>
+        </div>
+
+        <div class="p-grid" *ngIf="mostraDomicilioEqualsResidenza">
+            <div class="p-col">Domicilio(Via/P.zza) <br><input placeholder="inserisci il domiclio" pInputText
+                    type="text" formControlName="domicilio" id="domicilio"> </div>
+            <div class="p-col">Numero Civico/Int <br><input placeholder="inserisci il numero civico" pInputText
+                    type="number" formControlName="numCivicoDomicilio" id="numCivicoDomicilio"></div>
+        </div> <br>
+        <div class="p-grid" *ngIf="mostraDomicilioEqualsResidenza">
+            <div class="p-col"> Comune <input placeholder="inserisci il comune" pInputText type="text"
+                    formControlName="comuneDomicilio" id="comuneDomicilio"></div>
+            <div class="p-col">Provincia <input placeholder="inseriscila provincia" pInputText type="text"
+                    formControlName="provinciaDomicilio" id="provinciaDomicilio"> </div>
+            <div class="p-col">CAP <input placeholder="inserisci il CAP" pInputText type="number"
+                    formControlName="capDomicilio" id="capDomicilio"></div> <br>
+        </div> <br>
+
+        <div class="p-grid">
+            <div class="p-col">Telefono <br>
+                <p-inputMask mask="(999) 999-9999" placeholder="(999) 999-9999" formControlName="telefono"></p-inputMask>
+            </div>
+            <div class="p-col">Email <br><input placeholder="inserisci l'email" pInputText type="text"
+                    formControlName="email" id="email"> </div>
+        </div><br> -->
+
+
+        
+        <!-- 
+        <div class="p-col">
+            <span>
+
+
+                Data disponibilità / preavviso <br><input placeholder="inserisci la data" pInputText type="date"
+                    formControlName="dataDisponibilita" id="dataDisponibilita">
+            </span>
+        </div> <br>
+        <div class="p-col">
+            <span> preferita <br><input placeholder="inserisci la mansione" pInputText type="text"
+                    formControlName="mansione" id="mansione"></span>
+        </div> <br>
+        <div class="p-grid">
+            <div class="p-col"> Cittadinanza Italiana:
+                <p-radioButton name="cittadinanzaItaliana" value="Si" label="Si" inputId="si"
+                    (onClick)="showPermesso(false)" formControlName="cittadinanzaItaliana"></p-radioButton>
+                <p-radioButton name="cittadinanzaItaliana" value="No" label="No" inputId="no"
+                    (onClick)="showPermesso(true)" formControlName="cittadinanzaItaliana"></p-radioButton>
+            </div>
+            <div class="p-col" *ngIf="mostraPermesso"> Permesso di soggiorno :
+                <p-radioButton name="permessoDiSoggiorno" value="Si" label="Si" inputId="si" formControlName="permessoDiSoggiorno"></p-radioButton>
+                <p-radioButton name="permessoDiSoggiorno" value="No" label="No" inputId="no" formControlName="permessoDiSoggiorno"></p-radioButton>
+            </div> <br>
+        </div> <br>
+        <div class="p-col">
+            <div class="p-col">
+                Sei iscritto al Centro per l'Impiego? <br>
+                <p-radioButton name="iscrizioneCPI" value="Si" label="Si" inputId="si"
+                    (onClick)="showDataIscrizioneCpi(true)" formControlName="iscrizioneCpi"></p-radioButton>
+                <p-radioButton name="iscrizioneCPI" value="No" label="No" inputId="no"
+                    (onClick)="showDataIscrizioneCpi(false)" formControlName="iscrizioneCpi"></p-radioButton>
+            </div>
+
+            <div class="p-col" *ngIf="mostraDataIscrizioneCPI">Data di iscrizione al Centro per l'Impiego <br><input
+                    placeholder="inserisci data iscrizione CPI" pInputText type="date"
+                    formControlName="dataIscrizioneCentroImpiego" id="dataIscrizioneCentroImpiego"></div>
+        </div> <br>
+
+        <div class="p-grid">
+            <div class="p-col"> <br>
+                Categorie Protette <br>
+
+
+                <p-radioButton name="iscrizioneCategoriaProtetta" (onClick)="showDataCategoriaProtetta(true)" value="Si"
+                    label="Si" inputId="si" formControlName="iscrizioneCategoriaProtetta"></p-radioButton>
+                <p-radioButton name="iscrizioneCategoriaProtetta" (onClick)="showDataCategoriaProtetta(false)"
+                    value="No" label="No" inputId="no" formControlName="iscrizioneCategoriaProtetta" ></p-radioButton>
+            </div>
+            <div class="p-col" *ngIf="mostraDataCategoriaProtetta">
+                Dal <br>
+                <input placeholder="inserisci la data" pInputText type="date" formControlName="dataCategoriaProtetta"
+                    id="dataCategoriaProtetta">
+            </div>
+        </div>
+        <div class="p-col" *ngIf="mostraDataCategoriaProtetta"> <span> % Invalidità:<br>
+                <input placeholder="inserisci la percentuale di Invalidità" pInputText type="number"
+                    formControlName="invalidità" id="invalidità"> </span></div>
+        <div class="p-grid"> <br>
+            <div class="p-col">
+                <br> Patente : <br>
+
+                <p-radioButton name="patente" value="Si" label="Si" inputId="si" (onClick)="showPatente(true)" formControlName="possessoPatente">
+                </p-radioButton>
+                <p-radioButton name="patente" value="No" label="No" inputId="no" (onClick)="showPatente(false)" formControlName="possessoPatente">
+                </p-radioButton>
+            </div>
+
+            <div class="p-col" *ngIf="mostraPatente">Tipo Patente: <br>
+                <input placeholder="inserisci il tipo di patente" pInputText type="text" formControlName="tipoPatente"
+                    id="tipoPatente">
+            </div>
+
+
+        </div> <br>
+        <div class="p-col" *ngIf="mostraPatente"> Disponibilità all'utilizzo della propria auto/moto :
+
+            <p-radioButton name="disponibilitaAutoMoto" value="Si" label="Si" inputId="si"></p-radioButton>
+            <p-radioButton name="disponibilitaAutoMoto" value="No" label="No" inputId="no"></p-radioButton>
+
+
+
+        </div> <br>
+
+        <p-button [disabled]=!mioForm.valid label="Click" (onClick)="salva()"></p-button> -->
+    </form>
+</p-panel>
